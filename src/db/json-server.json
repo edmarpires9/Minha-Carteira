@@ -1,0 +1,171 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Camisa",
+      "price": 90
+    },
+    {
+      "id": "2",
+      "name": "Calça Jeans",
+      "price": 150
+    },
+    {
+      "id": "3",
+      "name": "Tênis",
+      "price": 250
+    },
+    {
+      "id": "4",
+      "name": "Jaqueta",
+      "price": 320
+    },
+    {
+      "id": "5",
+      "name": "Boné",
+      "price": 50
+    },
+    {
+      "id": "6",
+      "name": "Cinto de Couro",
+      "price": 80
+    },
+    {
+      "id": "7",
+      "name": "Relógio",
+      "price": 600
+    },
+    {
+      "id": "8",
+      "name": "Óculos de Sol",
+      "price": 200
+    },
+    {
+      "id": "9",
+      "name": "Meias",
+      "price": 25
+    },
+    {
+      "id": "10",
+      "name": "Mochila",
+      "price": 180
+    },
+    {
+      "id": "11",
+      "name": "Mochilo",
+      "price": 180
+    },
+    {
+      "id": "475e",
+      "name": "Edmarzinho",
+      "price": "10"
+    },
+    {
+      "id": "d5fb"
+    },
+    {
+      "id": "3def"
+    },
+    {
+      "id": "b1ca",
+      "name": "E",
+      "price": "2"
+    },
+    {
+      "id": "c799",
+      "name": "E",
+      "price": "2"
+    },
+    {
+      "id": "6fe6",
+      "name": "E",
+      "price": "2"
+    },
+    {
+      "id": "ad2f",
+      "name": "E",
+      "price": "2"
+    },
+    {
+      "id": "6554",
+      "name": "E",
+      "price": "2"
+    },
+    {
+      "id": "6c35",
+      "name": "E",
+      "price": "2"
+    },
+    {
+      "id": "8ff3",
+      "name": "Inserido",
+      "price": "10"
+    }
+  ],
+  "wallet": [
+    {
+      "id": "1",
+      "name": "Mercado",
+      "value": 150.75
+    },
+    {
+      "id": "2",
+      "name": "Gasolina",
+      "value": 230
+    },
+    {
+      "id": "3",
+      "name": "Aluguel",
+      "value": 1200
+    },
+    {
+      "id": "4",
+      "name": "Internet",
+      "value": 99.9
+    },
+    {
+      "id": "5",
+      "name": "Academia",
+      "value": 89.9
+    },
+    {
+      "id": "6",
+      "name": "Farmácia",
+      "value": 45.5
+    },
+    {
+      "id": "7",
+      "name": "Restaurante",
+      "value": 75
+    },
+    {
+      "id": "8",
+      "name": "Luz",
+      "value": 210.3
+    },
+    {
+      "id": "9",
+      "name": "Água",
+      "value": 80.25
+    },
+    {
+      "id": "10",
+      "name": "Cinema",
+      "value": 50
+    }
+  ],
+  "sidebar": [
+    {
+      "id": "1",
+      "icon": "fa-solid fa-wallet",
+      "pageName": "wallet",
+      "displayName": "Dinheiro"
+    },
+    {
+      "id": "2",
+      "icon": "fa-solid fa-car",
+      "pageName": "vehicle",
+      "displayName": "Veiculo"
+    }
+  ]
+}

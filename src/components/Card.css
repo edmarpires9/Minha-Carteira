@@ -1,0 +1,42 @@
+.card{
+    margin: 10px;
+    width: 350px;
+    min-height: fit-content;
+    background-color: #181818;
+    border: 2px solid gray;
+    border-radius: 1.5em;
+    padding: 20px;
+}
+
+.card-quest-name{
+    font-size: larger;
+    font-style: italic;
+}
+
+.card-quest-description{
+}
+
+.card-quest-days-left{
+    font-size: 12px;
+}
+
+.card-new-task-button {
+    background-color: #3b41ec;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 25rem;
+    flex: none;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    font-weight: bolder;
+    font-size: larger;
+    line-height: 1.2;
+    transition: background-color 1s;
+    display: inline-flex;
+}
+
+.card-new-task-button:hover {
+    color: white;
+    background-color: #212589;
+}

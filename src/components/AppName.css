@@ -1,0 +1,11 @@
+.app-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.app-name-header {
+    font-weight: bold;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}

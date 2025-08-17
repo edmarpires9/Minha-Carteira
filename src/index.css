@@ -1,0 +1,30 @@
+/*
+* index.css arquivo de CSS Global
+ ^ Fonte personalizada, muito bonita! (*-*)/
+ */
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./fonts/Inter-VariableFont_opsz,wght.ttf') format('opentype'); /* Ajuste o caminho e o formato */
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+  color: white;
+  font-family: 'Inter';
+}
+
+body{
+  background: #111111;
+}
+
+ul{
+  list-style: none;
+}
+
+.space-around{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
