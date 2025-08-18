@@ -2,7 +2,6 @@ import { useState } from "react";
 import "./App.css";
 import MainSection from "./components/MainSection";
 import NavBar from "./components/NavBar";
-import CreateUser from "./components/User";
 
 function App() {
   /*
@@ -22,7 +21,6 @@ function App() {
     <div>
       <NavBar/>
       {pageToShow === 'mainSection' && <MainSection setPageToShow={setPageToShow}/>}
-      {pageToShow === 'createUser' && <CreateUser/>}
     </div>
   );
 }

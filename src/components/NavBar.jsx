@@ -1,11 +1,10 @@
-// Navbar.jsx
 import AppName from "./AppName";
 import "./NavBar.css";
 import "./icons/all.css";
-import { useState } from "react";
+// import { useState } from "react";
 
 export default function Navbar() {
-  const [open, setOpen] = useState(null);
+  // const [open, setOpen] = useState(null);
   //^ Após feito algum sistema de autenticação desbloquear funcionalidades quando o usuário estiver logado. 
   // const toggleMenu = (menu) => {
   //   setOpen(open === menu ? null : menu);

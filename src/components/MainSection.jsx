@@ -1,6 +1,6 @@
 import Button from "./Button";
-import User from "./User";
 import "./MainSection.css";
+import { useEffect, useState } from "react";
 
 const MainSection = ({ setPageToShow }) => {
   const createUser = (firstName, password) => {
@@ -8,9 +8,34 @@ const MainSection = ({ setPageToShow }) => {
     alert("TODO: Usuário criado com sucesso");
   };
 
-  //^ Criar um hook com metodos HTPP get, post, update, delete.
+  const [user, setUser] = useState([]);
+  const [firstName, setFirstName] = useState("");
+  const [password, setPassword] = useState("");
+  const [success, setSuccess] = useState("");
+  const [error, setError] = useState("");
+
+  //^ Refatorar isso para um hook com metódos HTTP get, post, update, delete.
+  useEffect(() => {
+    async function fetchData() {
+      const res = await fetch("http://localhost:3000/reg_user");
+      const data = await res.json();
+      setUser(data);
+    }
+    fetchData();
+  }, []);
+
   const login = () => {
-    alert("TODO: Login realizado com sucesso!");
+    const userFound = user.find(
+      (data) => data.name === firstName && data.password === password
+    );
+
+    if (userFound) {
+      setError(""); // limpa o erro
+      setSuccess("Usuário encontrado");
+    } else {
+      setSuccess("");
+      setError("Usuário não encontrado ou senha incorreta"); // mensagem de erro
+    }
   };
 
   return (
@@ -21,7 +46,34 @@ const MainSection = ({ setPageToShow }) => {
         </h1>
         <h2 className="main-section-h2">Collect goals that make you grow</h2>
       </div>
-      <User />
+<form>
+  <div className="form-group">
+    <input
+      type="text"
+      id="fullname"
+      required
+      placeholder=" "
+      onChange={(e) => setFirstName(e.target.value)}
+      autoComplete="name"
+    />
+    <label htmlFor="fullname">Nome</label>
+  </div>
+
+  <div className="form-group">
+    <input
+      type="password"
+      id="password"
+      required
+      placeholder=" "
+      onChange={(e) => setPassword(e.target.value)}
+      autoComplete="current-password"
+    />
+    <label htmlFor="password">Senha</label>
+  </div>
+</form>
+
+      {success && <p style={{ color: "green" }}>{success}</p>}
+      {error && <p style={{ color: "red" }}>{error}</p>}
       <Button
         name="Criar usuário"
         setFunction={createUser}

@@ -32,10 +32,12 @@ ul{
 .form-group {
   position: relative;
   margin: 20px 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .form-group input {
-  width: 100%;
+  margin: 5px;
   padding: 10px;
   font-size: 16px;
   border: 1px solid black;
@@ -60,7 +62,7 @@ ul{
 /* Quando o input estiver em foco ou preenchido */
 .form-group input:focus + label,
 .form-group input:not(:placeholder-shown) + label {
-  top: -3px;
+  top: 6px;
   left: 15px;
   font-size: 14px;
   color: white;
