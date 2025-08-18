@@ -1,0 +1,22 @@
+.button {
+    background-color: var(--bg);
+    transition: background-color 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 25rem;
+    flex: none;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    font-weight: bolder;
+    font-size: larger;
+    line-height: 1.2;
+    display: inline-flex;
+    border: none;
+    margin: 10px;
+}
+
+.button:hover {
+    background-color: var(--bg-hover);
+    color: black;
+}

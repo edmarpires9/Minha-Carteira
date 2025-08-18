@@ -1,7 +1,18 @@
-import Card from "./Card";
+import Button from "./Button";
+import User from "./User";
 import "./MainSection.css";
 
-const MainSection = () => {
+const MainSection = ({ setPageToShow }) => {
+  const createUser = (firstName, password) => {
+    //^ Criar um hook com metodos HTTP get, post, update, delete.
+    alert("TODO: Usuário criado com sucesso");
+  };
+
+  //^ Criar um hook com metodos HTPP get, post, update, delete.
+  const login = () => {
+    alert("TODO: Login realizado com sucesso!");
+  };
+
   return (
     <div className="main-section">
       <div className="main-section-fit-content">
@@ -10,7 +21,23 @@ const MainSection = () => {
         </h1>
         <h2 className="main-section-h2">Collect goals that make you grow</h2>
       </div>
-        <Card/>
+      <User />
+      <Button
+        name="Criar usuário"
+        setFunction={createUser}
+        cssConfig={{
+          backgroundColor: "#181818",
+          backgroundColorHover: "white",
+        }}
+      />
+      <Button
+        name="Entrar"
+        setFunction={login}
+        cssConfig={{
+          backgroundColor: "#181818",
+          backgroundColorHover: "white",
+        }}
+      />
     </div>
   );
 };

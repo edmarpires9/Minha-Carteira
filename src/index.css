@@ -28,3 +28,40 @@ ul{
   justify-content: space-around;
   align-items: center;
 }
+
+.form-group {
+  position: relative;
+  margin: 20px 0;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid black;
+  border-radius: 4px;
+  background: transparent;
+}
+
+.form-group label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  background: #111111; /* mesma cor do fundo */
+  padding: 0 5px;
+  color: #999;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.2s ease all;
+  font-weight: bold;
+}
+
+/* Quando o input estiver em foco ou preenchido */
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label {
+  top: -3px;
+  left: 15px;
+  font-size: 14px;
+  color: white;
+}

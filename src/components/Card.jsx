@@ -1,5 +1,5 @@
 import "./Card.css";
-const Card = () => {
+const Card = ({setPageToShow}) => {
   return (
     <div className="card">
       <div className="space-around">
@@ -9,7 +9,7 @@ const Card = () => {
       <p className="card-quest-description">
         Crie um usuário para começar utilizar a aplicação
       </p>
-      <button className="card-new-task-button">+</button>
+      <button onClick={() => {setPageToShow('createUser')}} className="card-new-task-button">Começar</button>
     </div>
   );
 };

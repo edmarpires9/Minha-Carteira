@@ -6,23 +6,23 @@ import { useState } from "react";
 
 export default function Navbar() {
   const [open, setOpen] = useState(null);
-
-  const toggleMenu = (menu) => {
-    setOpen(open === menu ? null : menu);
-  };
+  //^ Após feito algum sistema de autenticação desbloquear funcionalidades quando o usuário estiver logado. 
+  // const toggleMenu = (menu) => {
+  //   setOpen(open === menu ? null : menu);
+  // };
 
   return (
     <nav className="navbar">
       <AppName/>
-      <ul className="nav-links">
+      {/* <ul className="nav-links">
         <li
           className="nav-item"
-          onClick={() => toggleMenu("product")}
+          onClick={() => toggleMenu("achievements")}
         >
-          <span className={open === 'product' ? "nav-span-active" : "nav-span"}>Product <i class="fa-solid fa-chevron-down"></i></span>
-          {open === "product" && (
+          <span className={open === 'achievements' ? "nav-span-active" : "nav-span"}>Achievements <i class="fa-solid fa-chevron-down"></i></span>
+          {open === "achievements" && (
             <ul className="dropdown">
-              <li>Product Overview</li>
+              <li>achievements Overview</li>
               <li>Integrations</li>
               <li>Analytics</li>
             </ul>
@@ -44,7 +44,7 @@ export default function Navbar() {
               </div>
           )}
         </li>
-      </ul>
+      </ul> */}
     </nav>
   );
 }
