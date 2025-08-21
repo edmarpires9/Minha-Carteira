@@ -1,14 +1,20 @@
 {
-  "reg_user": [
+  "expenses": [
     {
-      "id": "1",
-      "name": "edmarpires9",
-      "password": "1234"
+      "id": "c180",
+      "description": "Estácio",
+      "amount": "547.99",
+      "date": "2025-08-20",
+      "paymentMethod": "Credit Card",
+      "category": "Food"
     },
     {
-      "id": "2",
-      "name": "edmarpires10",
-      "password": "12345"
+      "id": "7ccb",
+      "description": "Estácio",
+      "amount": "547.99",
+      "date": "2025-08-20",
+      "paymentMethod": "Credit Card",
+      "category": "Food"
     }
   ]
 }

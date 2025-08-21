@@ -1,11 +1,18 @@
-.app-name {
+.app-name{
+    display: flex;
+    justify-content: space-around;
+    font-size: 12px;
+    width: 100dvw;
+}
+
+.app-logo-and-title {
+    font-weight: bold;
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
 .app-name-header {
-    font-weight: bold;
     letter-spacing: 6px;
     text-transform: uppercase;
 }

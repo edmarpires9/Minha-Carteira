@@ -1,0 +1,27 @@
+.expense-title {
+    font-weight: bold;
+    font-size: small;
+    margin: 10px;
+}
+
+.expense-amount {
+    font-weight: bold;
+    font-size: small;
+    margin: 10px;
+}
+
+.expense-date {
+    font-weight: bold;
+    font-size: small;
+    margin: 10px;
+}
+
+.expense-card {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid white;
+    width: 300px;
+    border-radius: 8px;
+    background-color: #181818;
+    margin: 10px;
+}

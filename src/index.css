@@ -31,9 +31,10 @@ ul{
 
 .form-group {
   position: relative;
-  margin: 20px 0;
+  margin: 5px 0;
   display: flex;
   flex-direction: column;
+  max-width: 300px;
 }
 
 .form-group input {
