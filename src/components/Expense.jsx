@@ -1,12 +1,11 @@
 import Button from "./Button";
 import "./Expense.css";
-import { useFetch } from "./hooks/useFetch";
 
-const Expense = ({ id, name, amount, date, myAPI, httpConfig}) => {
+const Expense = ({ id, name, amount, date, httpConfig}) => {
   let formattedDate = date.split("-").reverse().join("/");
 
   const handleDelete = () => {
-    httpConfig({}, "DELETE", id);   
+    httpConfig("DELETE", id);   
   }
 
   return (
@@ -21,8 +20,8 @@ const Expense = ({ id, name, amount, date, myAPI, httpConfig}) => {
         name="Apagar"
         setFunction={handleDelete}
         cssConfig={{
-          backgroundColor: "#ff0000ff",
-          backgroundColorHover: "white",
+          backgroundColor: "#c82333",
+          backgroundColorHover: "#dc3545",
         }}
       />
       </div>

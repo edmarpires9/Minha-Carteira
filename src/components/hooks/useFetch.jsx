@@ -2,13 +2,13 @@ import { useState, useEffect } from "react";
 
 export const useFetch = (myAPI) => {
   const [data, setData] = useState(null);
-
   const [config, setConfig] = useState(null);
+  const [callFetch, setCallFetch] = useState(false);
+  
   const [method, setMethod] = useState(null);
   const [id, setId] = useState();
-  const [callFetch, setCallFetch] = useState(false);
 
-  const httpConfig = (data, method, id) => {    
+  const httpConfig = (method, id=null, data = {}) => {    
     if (method === "POST") {      
       setConfig({
         method,
@@ -57,7 +57,7 @@ export const useFetch = (myAPI) => {
       }
     };
     httpRequest();
-  }, [config]);
+  }, [myAPI, id, method, config]);
 
   return { data, httpConfig };
 };

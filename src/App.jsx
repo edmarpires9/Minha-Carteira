@@ -1,40 +1,51 @@
 import "./App.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useFetch } from "./components/hooks/useFetch";
 import NavBar from "./components/NavBar";
 import Button from "./components/Button";
 import Expense from "./components/Expense";
 
 function App() {
-  const myAPI = "http://localhost:3000/expenses";
-  const { data: expenses, httpConfig } = useFetch(myAPI);
-  //* Expenses
+  /* 
+  * To see the comments in the correct colors, use the Colorful Comments extension.
+  & Future new ideas to implement - I am my POO
+  ^ Page Not Found
+  ^ Validations
+  ~ Category icon
+  ~ PayamentMethod icon
+  ~ Sort by amount, category, due date
+  ~ Recurring
+  ~ Checkbox payed,
+  ~ Installments
+  ~ modals new expense
+  ~ Transition when card was created
+  */
+
+  /*
+  ? I know the best way to do things, but for now I am the only one handling POO, Front-end, Back-end, Database, QA, and more...
+  * On this team, so I decide:
+  ! Cut off database and back-end API
+  & In order to focus on the front-end and make this application faster in the limited time I have
+  ^ Database replaced by JSON-SERVER
+  ^ Since JavaScript can be used on the front-end, the application logic was implemented here to avoid the need for a back-end PHP or NodeJS.
+  */
+
+  const api = {
+    endpoints: {
+      "expenses": "http://localhost:3000/expenses"
+    }
+  }
+  const { data: expenses, httpConfig } = useFetch(api.endpoints.expenses);
   const [description, setDescription] = useState();
   const [amount, setAmout] = useState();
   const [date, setDate] = useState();
 
-  // "expenses": [
-  // {
-  //   "id": 1,
-  //   "description": "Groceries",
-  //   "amount": 150.75,
-  //   "category": "Food",
-  //   "date": "2025-08-20",
-  //   "paymentMethod": "Credit Card"
-  // },
-  // "recurring": true
-  //     "installments": {
-  //   "total": 3,
-  //   "current": 1
-  // }
-  //ERRO SE VAZIO
-
   const insertNewExpense = () => {
-    httpConfig({
+    httpConfig("POST", null , {
       description,
       amount,
       date
-    }, "POST");
+    });
   };
 
   return (
@@ -81,13 +92,12 @@ function App() {
           <label htmlFor="fullname"></label>
         </div>
       </form>
-
       <Button
         name="Adicionar"
         setFunction={insertNewExpense}
         cssConfig={{
-          backgroundColor: "#09a538ff",
-          backgroundColorHover: "white",
+          backgroundColor: "#218838",
+          backgroundColorHover: "#28a745",
         }}
       />
 
@@ -99,7 +109,7 @@ function App() {
             name={expense.description}
             amount={expense.amount}
             date={expense.date}
-            myAPI={myAPI}
+            myAPI={api.endpoints.expenses}
             httpConfig={httpConfig}
           />
         ))}
