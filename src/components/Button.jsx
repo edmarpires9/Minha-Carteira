@@ -6,7 +6,9 @@ const Button = ({ name, setFunction, cssConfig }) => {
       className="button"
       style={{
         "--bg": cssConfig.backgroundColor,
-        "--bg-hover": cssConfig.backgroundColorHover
+        "--bg-hover": cssConfig.backgroundColorHover,
+        "--c": cssConfig.color,
+        "--c-hover": cssConfig.colorHover
       }}
       onClick={setFunction}
     >

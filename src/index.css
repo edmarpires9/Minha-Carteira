@@ -5,25 +5,28 @@
 
 @font-face {
   font-family: 'Inter';
-  src: url('./fonts/Inter-VariableFont_opsz,wght.ttf') format('opentype'); /* Ajuste o caminho e o formato */
+  src: url('./fonts/Inter-VariableFont_opsz,wght.ttf') format('opentype');
+  /* Ajuste o caminho e o formato */
   font-weight: normal;
   font-style: normal;
 }
 
-*{
-  color: white;
-  font-family: 'Inter';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  font-family: 'Montserrat';
+  font-size: small;
 }
 
-body{
-  background: #111111;
+body {
+  background: white;
 }
 
-ul{
+ul {
   list-style: none;
 }
 
-.space-around{
+.space-around {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -43,7 +46,6 @@ ul{
   font-size: 16px;
   border: 1px solid black;
   border-radius: 4px;
-  background: transparent;
 }
 
 .form-group label {
@@ -51,7 +53,6 @@ ul{
   top: 50%;
   left: 10px;
   transform: translateY(-50%);
-  background: #111111; /* mesma cor do fundo */
   padding: 0 5px;
   color: #999;
   font-size: 16px;
@@ -61,10 +62,17 @@ ul{
 }
 
 /* Quando o input estiver em foco ou preenchido */
-.form-group input:focus + label,
-.form-group input:not(:placeholder-shown) + label {
+.form-group input:focus+label,
+.form-group input:not(:placeholder-shown)+label {
   top: 6px;
   left: 15px;
   font-size: 14px;
   color: white;
+  background-color: blueviolet;
+}
+
+.row{
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }

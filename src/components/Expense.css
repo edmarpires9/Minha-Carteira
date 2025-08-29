@@ -1,33 +1,58 @@
 .expense-title {
     font-weight: bold;
-    font-size: small;
     margin: 10px;
 }
 
 .expense-amount {
-    font-weight: bold;
-    font-size: small;
     margin: 10px;
 }
 
 .expense-date {
-    font-weight: bold;
-    font-size: small;
     margin: 10px;
+}
+
+.expense-status {
+  margin-left: 10px;
+}
+
+/* Pendente → verde */
+.expense-status-paid {
+  color: green;
+}
+.expense-status-pending {
+  color: orange;
+}
+
+/* Fora do prazo → vermelho */
+.expense-status-overdue {
+  color: red;
 }
 
 .expense-card {
     display: flex;
-    justify-content: space-between;
-    border: 2px solid white;
     width: 300px;
     border-radius: 8px;
-    background-color: #181818;
-    margin: 10px;
+    background-color: #f2f2f2;
+    margin: 10px 2px;
     transition: background-color 0.5s ease;
 }
 
 .expense-card:hover {
     cursor: pointer;
-    background-color: #2a2a2a;
+    background-color: #ebebeb;
+    transform: scale(1.02);
+}
+
+.expense-card-title-and-close{
+  display: flex;
+  justify-content: space-between;
+  width: 290px;
+  align-items: center;
+  height: 15px;
+  margin-top: 10px;
+}
+
+.expense-close-btn:hover{
+  color: red;
+  font-weight: bold;
 }

@@ -1,30 +1,45 @@
-import Button from "./Button";
 import "./Expense.css";
+import "../components/icons/all.css";
 
-const Expense = ({ id, name, amount, date, httpConfig}) => {
-  let formattedDate = date.split("-").reverse().join("/");
+const Expense = ({ expenses, httpConfig }) => {
+  const formattedDate = (date) => {
+    return date.split("-").reverse().join("/");
+  };
 
-  const handleDelete = () => {
-    httpConfig("DELETE", id);   
-  }
+  const handleDelete = (id) => {
+    httpConfig("DELETE", id);
+  };
+
+  const checkPaymentStatus = (date, isPayed) => {
+    const today = new Date(); // data atual
+    const expenseDate = new Date(date); // transforma string em Date
+    const isPeding = expenseDate >= today; // retorna true se pendente
+
+    //Retorna que está pago
+    if (isPeding && isPayed) {
+      // return ({<i class="fa-solid fa-circle-info" title="Pendente"></i></p>});
+    }
+    //retorna que está pedente
+    if (isPeding) {
+      return "expense-status-peding";
+    }
+  };
 
   return (
     <div>
-      <div className="expense-card">
-        <div>
-          <p className="expense-title">{name}</p>
-          <p className="expense-amount">R$ {amount}</p>
+      {expenses.map((expense) => (
+        <div className="expense-card">
+          <div>
+            <div className="expense-card-title-and-close">
+              <p className="expense-title">{expense.description}</p>
+              <p className="expense-close-btn" onClick={() => {handleDelete(expense.id)}}>✖</p>
+            </div>
+            <p className="expense-amount">R$ {expense.amount}</p>
+            <p className="expense-amount">{expense.date}</p>
+            {checkPaymentStatus(expense.date, expense.isPayed)}
+          </div>
         </div>
-        <p className="expense-date">{formattedDate}</p>
-      <Button
-        name="Apagar"
-        setFunction={handleDelete}
-        cssConfig={{
-          backgroundColor: "#c82333",
-          backgroundColorHover: "#dc3545",
-        }}
-      />
-      </div>
+      ))}
     </div>
   );
 };

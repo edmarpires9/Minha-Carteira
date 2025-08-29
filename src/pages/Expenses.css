@@ -1,0 +1,115 @@
+/* Container principal */
+.app-container {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+/* Botão de abrir modal */
+.open-btn {
+  padding: 8px 16px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.open-btn:hover {
+  background-color: #2563eb;
+}
+
+/* Overlay do modal */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal */
+.modal {
+  width: fit-content; /* equivalente a w-96 */
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  border: 1px solid #d1d5db; /* cinza claro */
+  display: flex;
+  flex-direction: column;
+
+}
+
+/* Cabeçalho */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e5e7eb; /* cinza claro */
+  padding: 8px 16px;
+  border-bottom: 1px solid #d1d5db;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.modal-header p {
+  font-family: "Montserrat";
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #4b5563;
+  cursor: pointer;
+  border-radius: 100%;
+}
+
+.close-btn:hover {
+  color: #dc2626; /* vermelho */
+}
+
+/* Conteúdo */
+.modal-content {
+  padding: 16px;
+}
+
+/* Rodapé */
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 8px 16px;
+  border-top: 1px solid #d1d5db;
+  background-color: #f9fafb;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* Botões do rodapé */
+.btn-secondary {
+  padding: 10px 12px;
+  background-color: #e5e7eb;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: #d1d5db;
+}
+
+.btn-primary {
+  padding: 10px 12px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #2563eb;
+}

@@ -3,19 +3,24 @@
     transition: background-color 0.5s ease;
     text-align: center;
     cursor: pointer;
-    border-radius: 25rem;
-    flex: none;
+    border-radius: 8px;
     justify-content: center;
     align-items: center;
-    font-weight: bolder;
     line-height: 1.2;
     display: inline-flex;
     border: none;
-    margin: 10px;
     padding: 0.5rem 1.5rem;
-    font-size: small;
+    font-size: 14px;
+    font-family: "Montserrat";
+    color: var(--c);
+    transition: transform 0.1s ease;
 }
 
 .button:hover {
     background-color: var(--bg-hover);
+    color: var(--c-hover);
+}
+
+.button:active{
+    transform: scale(0.85);
 }

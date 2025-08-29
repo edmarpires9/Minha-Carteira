@@ -1,0 +1,24 @@
+.app-name{
+    width: fit-content;
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+.app-name:hover{
+    background-color: #f4f4f4;
+    cursor: pointer;
+}
+
+.app-name:active{
+    transform: scale(0.9);
+}
+
+.app-logo-and-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #181818;
+    border: 1px solid #c2c2c2;
+    padding: 0px 5px;
+    border-radius: 8px;
+}
